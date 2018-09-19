@@ -4,11 +4,15 @@ A dockerized example on how to use Apache Kafka message broker with Ruby Karafka
 
 ## Usage
 1. Start the docker container by executing the below in the terminal (you need to install docker if not installed)
+
 `docker-compose up --build`
+
 Now Apache Kafka and Zookeeper are up and running, also our example-app is running Karafka server.
 
 2. Attach shell to the container `example-app_app01` and send some messages by executing the following:
+
 `rake waterdrop:send`
+
 This will execute a `rake` task in the example code which publish some messages using `waterdrop` gem.
 
 3. Now you should see logs indicates that the karafka server consumed the messages and a ping pong messaging is working.
